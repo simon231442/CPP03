@@ -10,7 +10,7 @@ OBJ_DIR = obj
 #                                SOURCE FILES                                  #
 ################################################################################
 
-SOURCE = main.cpp ClapTrap.cpp 
+SOURCE = main.cpp ClapTrap.cpp ScavTrap.cpp
 
 ################################################################################
 #                             COMPILER OPTIONS                                 #
@@ -45,4 +45,3 @@ fclean : clean
 re : fclean all
 
 .PHONY : all clean fclean re
-
