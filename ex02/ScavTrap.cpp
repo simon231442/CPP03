@@ -1,35 +1,35 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap() : ClapTrap()
+FragTrap::FragTrap() : ClapTrap()
 {
 	HitPoints_ = 100;
 	EnergyPoints_ = 50;
 	AttackDamage_ = 20;
-	std::cout << "ScavTrap Default Constructor called" << std::endl;
+	std::cout << "FragTrap Default Constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string const& name) : ClapTrap(name)
+FragTrap::FragTrap(std::string const& name) : ClapTrap(name)
 {
 	HitPoints_ = 100;
 	EnergyPoints_ = 50;
 	AttackDamage_ = 20;
-	std::cout << "ScavTrap " << Name_ << " Constructor called" << std::endl;
+	std::cout << "FragTrap " << Name_ << " Constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(ScavTrap const& src) : ClapTrap(src)
+FragTrap::FragTrap(FragTrap const& src) : ClapTrap(src)
 {
-	std::cout << "ScavTrap Copy Constructor called" << std::endl;
+	std::cout << "FragTrap Copy Constructor called" << std::endl;
 }
 
 
-ScavTrap::~ScavTrap()
+FragTrap::~FragTrap()
 {
-	std::cout << "ScavTrap " << Name_ << " Destructor called" << std::endl;
+	std::cout << "FragTrap " << Name_ << " Destructor called" << std::endl;
 }
 
-ScavTrap&	ScavTrap::operator=(ScavTrap const& src)
+FragTrap&	FragTrap::operator=(FragTrap const& src)
 {
-	std::cout << "ScavTrap Assignment Operator called" << std::endl;
+	std::cout << "FragTrap Assignment Operator called" << std::endl;
 	if (this != &src)
 	{
 		this->ClapTrap::operator=(src); //src is implicitely casted in ClapTrap
@@ -37,26 +37,26 @@ ScavTrap&	ScavTrap::operator=(ScavTrap const& src)
 	return *this;
 }
 
-void		ScavTrap::attack(const std::string& target)
+void		FragTrap::attack(const std::string& target)
 {
 	if (HitPoints_ > 0 && EnergyPoints_ > 0)
 	{
 		EnergyPoints_--;
-		std::cout << "ScavTrap " << Name_ << " attacks " << target 
+		std::cout << "FragTrap " << Name_ << " attacks " << target 
 				<< ", causing " << AttackDamage_ << " points of damage!" << std::endl;
 	}
 	else
 	{
-		std::cout << "ScavTrap " << Name_ << " has no energy or hit points left to attack!" << std::endl;
+		std::cout << "FragTrap " << Name_ << " has no energy or hit points left to attack!" << std::endl;
 	}
 }
 
-void		ScavTrap::guardGate(void)
+void		FragTrap::guardGate(void)
 {
 	if (HitPoints_ > 0)
-		std::cout << "ScavTrap " << Name_ << " is now in Gate keeper mode." << std::endl;
+		std::cout << "FragTrap " << Name_ << " is now in Gate keeper mode." << std::endl;
 	else
-		std::cout << "ScavTrap " << Name_ << " is dead and cannot guard the gate." << std::endl;
+		std::cout << "FragTrap " << Name_ << " is dead and cannot guard the gate." << std::endl;
 }
 
 
