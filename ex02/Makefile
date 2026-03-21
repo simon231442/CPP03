@@ -1,4 +1,4 @@
-NAME = AttaScav
+NAME = AttaTrap
 
 ################################################################################
 #                               DIRECTORIES                                    #
@@ -10,7 +10,7 @@ OBJ_DIR = obj
 #                                SOURCE FILES                                  #
 ################################################################################
 
-SOURCE = main.cpp ClapTrap.cpp ScavTrap.cpp
+SOURCE = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 ################################################################################
 #                             COMPILER OPTIONS                                 #

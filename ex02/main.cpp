@@ -1,21 +1,21 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 
 int	main(void)
 {
-	ScavTrap	scav = ScavTrap("anpayot");
+	FragTrap	frag = FragTrap("anpayot");
 
-	scav.attack("Target");
-	scav.takeDamage(5);
-	scav.beRepaired(3);
-	scav.guardGate();
+	frag.attack("Target");
+	frag.takeDamage(5);
+	frag.beRepaired(3);
+	frag.highFivesGuys();
 
 	for (int i = 0; i < 11; i++)
-		scav.attack("Target");
+		frag.attack("Target");
 	
-	scav.takeDamage(200);
-	scav.beRepaired(5);
-	scav.guardGate();
+	frag.takeDamage(200);
+	frag.beRepaired(5);
+	frag.highFivesGuys();
 
 	return 0;
 }
